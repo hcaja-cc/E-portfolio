@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hizon Caja | Information Technology Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-theme">
+
+  <!-- Interactive Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo">HC<span>.tech</span></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge">Welcome to my Portfolio</span>
+        <h1 class="hero-title">Hi, I'm <span class="highlight">Hizon Caja</span></h1>
+        <h2 class="typing-container"><span class="typing-text"></span><span class="cursor">&nbsp;</span></h2>
+        <p class="hero-bio">
+          Information Technology Specialist with a focus on Learning Technology, Web Development, Multimedia Design, and Teaching.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
+          <a href="#experience" class="btn btn-outline"><i class="fa-solid fa-briefcase"></i> View Experience</a>
+        </div>
+      </div>
+      
+      <!-- Profile Photo Frame -->
+      <div class="hero-image-container">
+        <div class="image-wrapper">
+          <!-- ATTACH YOUR PHOTO HERE: Set your photo file path in the src attribute below -->
+          <img src="photos\Caja, Hizon B-2285.jpg" alt="Hizon Caja Profile Photo" id="profile-photo" class="profile-photo" />
+          <div class="placeholder-overlay" id="placeholder-overlay">
+            <i class="fa-regular fa-user"></i>
+            <span>Attach Photo Here</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="about-card">
+        <div class="about-icon"><i class="fa-solid fa-user-graduate"></i></div>
+        <p class="about-text">
+          I am a graduate of Information Technology with a focus on Learning Technology. I'm good at adjusting to different situations and getting things done. I really enjoy learning new things and trying to get better at what I do. I'm always aiming to improve and reach my goals.
+        </p>
+        <div class="quick-highlights">
+          <div class="highlight-item">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div>
+              <h4>Specialization</h4>
+              <p>Learning Technology</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-laptop-code"></i>
+            <div>
+              <h4>Versatility</h4>
+              <p>Dev & Media Specialist</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-award"></i>
+            <div>
+              <h4>Leadership</h4>
+              <p>Student Leader & Intern</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2 class="section-title">Skills & <span>Expertise</span></h2>
+      
+      <div class="skills-filter">
+        <button class="filter-btn active" data-filter="all">All Skills</button>
+        <button class="filter-btn" data-filter="tech">Development</button>
+        <button class="filter-btn" data-filter="design">Design & Media</button>
+        <button class="filter-btn" data-filter="management">Management</button>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card" data-category="design">
+          <div class="skill-icon"><i class="fa-solid fa-object-group"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Designing user interfaces and smooth digital experiences.</p>
+        </div>
+
+        <div class="skill-card" data-category="tech">
+          <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Web Design / Front-end</h3>
+          <p>Building clean, responsive websites and front-end layouts.</p>
+        </div>
+
+        <div class="skill-card" data-category="design">
+          <div class="skill-icon"><i class="fa-solid fa-palette"></i></div>
+          <h3>Graphic Design</h3>
+          <p>Creating creative visual assets, branding, and graphics.</p>
+        </div>
+
+        <div class="skill-card" data-category="design">
+          <div class="skill-icon"><i class="fa-solid fa-image"></i></div>
+          <h3>Photo Editing</h3>
+          <p>Retouching, color enhancement, and graphic editing.</p>
+        </div>
+
+        <div class="skill-card" data-category="design">
+          <div class="skill-icon"><i class="fa-solid fa-film"></i></div>
+          <h3>Video Editing</h3>
+          <p>Producing and editing video content for multiple channels.</p>
+        </div>
+
+        <div class="skill-card" data-category="management">
+          <div class="skill-icon"><i class="fa-solid fa-list-check"></i></div>
+          <h3>Project Management</h3>
+          <p>Organizing tasks, coordinating projects, and goal execution.</p>
+        </div>
+
+        <div class="skill-card" data-category="tech">
+          <div class="skill-icon"><i class="fa-brands fa-wordpress"></i></div>
+          <h3>WordPress</h3>
+          <p>Developing and managing customized WordPress websites.</p>
+        </div>
+
+        <div class="skill-card" data-category="tech">
+          <div class="skill-icon"><i class="fa-solid fa-terminal"></i></div>
+          <h3>Programmer</h3>
+          <p>Developing system logic, software, and dynamic solutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <h2 class="section-title">Work <span>Experience</span></h2>
+      <div class="timeline">
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024 - Present</div>
+          <div class="timeline-content">
+            <h3>Full Time Instructor</h3>
+            <span class="timeline-company"><i class="fa-solid fa-chalkboard-user"></i> University of the Immaculate Conception </span>
+            <ul>
+              <li>BSIT Instructor</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2025 - 2026</div>
+          <div class="timeline-content">
+            <h3>Virtual Assistant</h3>
+            <span class="timeline-company"><i class="fa-solid fa-laptop"></i> Remote Services</span>
+            <ul>
+              <li>Video Editor</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023 - Present</div>
+          <div class="timeline-content">
+            <h3>Gem-Project Construction</h3>
+            <span class="timeline-company"><i class="fa-solid fa-building"></i> Gem-Project Construction</span>
+            <ul>
+              <li>Logo</li>
+              <li>Social Media Management</li>
+              <li>Digital Design</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023 - 2024</div>
+          <div class="timeline-content">
+            <h3>Capstone Project</h3>
+            <span class="timeline-company"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Development</span>
+            <ul>
+              <li>Mobile Developer</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <h2 class="section-title">Education & <span>Honors</span></h2>
+      <div class="education-card">
+        <div class="edu-header">
+          <div class="edu-icon">
+            <i class="fa-solid fa-university"></i>
+          </div>
+          <div>
+            <h3>University of the Immaculate Conception</h3>
+            <p class="edu-degree">Bachelor of Science in Information Technology specialized in Learning Technology, 2024</p>
+            <span class="edu-period"><i class="fa-regular fa-calendar"></i> Attended from 2020 to 2024</span>
+          </div>
+        </div>
+        <div class="edu-achievements">
+          <h4><i class="fa-solid fa-award"></i> Leadership & Recognition</h4>
+          <ul class="achievement-list">
+            <li><i class="fa-solid fa-check"></i> Vice Governor - Internal of the College of Computer Studies, 2023</li>
+            <li><i class="fa-solid fa-check"></i> Outstanding Student Leader</li>
+            <li><i class="fa-solid fa-check"></i> Outstanding Intern</li>
+            <li><i class="fa-solid fa-check"></i> Best in performance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Details</h3>
+          <p>Click on any contact card below to quickly copy the information.</p>
+          
+          <div class="contact-cards">
+            <div class="contact-card" onclick="copyText('09457862611', 'Phone number copied!')">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <span>Phone</span>
+                <p>0945 786 2611 <i class="fa-regular fa-copy copy-icon"></i></p>
+              </div>
+            </div>
+
+            <div class="contact-card" onclick="copyText('hizoncaja@gmail.com', 'Email address copied!')">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <span>Email</span>
+                <p>hizoncaja@gmail.com <i class="fa-regular fa-copy copy-icon"></i></p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <span>Address</span>
+                <p>Block 49 Lot 6, Axenite St., Deca Homes Esperanza, Tigatto, Davao City, 8000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-container">
+          <form id="contact-form" onsubmit="handleFormSubmit(event)">
+            <h3>Send Message</h3>
+            <div class="form-group">
+              <input type="text" id="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" required placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" required placeholder="Subject">
+            </div>
+            <div class="form-group">
+              <textarea id="message" rows="4" required placeholder="Your Message..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast">Copied to clipboard!</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Hizon Caja. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
